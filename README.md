@@ -34,97 +34,156 @@ category: "Blog"
 
 ---
 
-## 🎨 Schema.org 设置（三种方式）
+## 🎨 Schema.org 设置（灵活且强大）
 
-### 方式1：使用默认自动生成（推荐给简单文章）
+### 📌 固定保留的Schema（自动生成）
 
-什么都不用做，模板会自动生成基础的 BlogPosting schema。
+每篇文章**默认包含**以下schema，无需任何配置：
+
+1. **Organization** - 公司信息（全站通用）
+2. **BlogPosting** - 文章基础信息（标题、作者、日期等）
+
+### ✨ 三种使用方式
+
+#### 方式1：极简模式（什么都不加）
 
 ```yaml
 ---
 layout: post
-title: "我的文章"
+title: "我的新文章"
 description: "文章描述"
 ---
 
 文章正文...
 ```
 
-### 方式2：使用 FAQ 辅助（适合有常见问题的文章）
+**自动包含**: Organization + BlogPosting
 
-在 front matter 中添加 `faq` 字段：
+---
+
+#### 方式2：添加FAQ（简单快捷）
 
 ```yaml
 ---
 layout: post
-title: "我的文章"
+title: "定制袜子常见问题"
 faq:
-  - q: "问题1"
-    a: "答案1"
-  - q: "问题2"
-    a: "答案2"
+  - q: "最低起订量是多少？"
+    a: "500双起订"
+  - q: "交货期多久？"
+    a: "15-30天"
 ---
 
 文章正文...
 ```
 
-### 方式3：完全自定义 Schema（最灵活）
+**包含**: Organization + BlogPosting + **FAQ**
 
-在 front matter 中使用 `custom_schemas` 定义完整的 schema：
+---
+
+#### 方式3：添加自定义Schema（最强大）
+
+在 front matter 中使用 `custom_schemas` 添加额外的 schema：
 
 ```yaml
 ---
 layout: post
-title: "我的文章"
+title: "ANV Pro运动袜上市"
 custom_schemas:
   - |
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "自定义标题",
-      "description": "自定义描述",
-      "author": {
-        "@type": "Person",
-        "name": "作者名"
+      "@type": "Product",
+      "name": "ANV Pro运动袜",
+      "description": "高弹性专业运动袜",
+      "brand": {
+        "@type": "Brand",
+        "name": "ANV Socks"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "8.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+---
+
+文章正文...
+```
+
+**包含**: Organization + BlogPosting + **Product**
+
+---
+
+### 🔥 Schema可以叠加！
+
+你可以同时使用FAQ和自定义Schema：
+
+```yaml
+---
+layout: post
+title: "新款运动袜发布"
+faq:
+  - q: "适合什么运动？"
+    a: "跑步、篮球、足球都适合"
+custom_schemas:
+  - |
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "ANV运动袜",
+      "offers": {
+        "@type": "Offer",
+        "price": "8.99",
+        "priceCurrency": "USD"
       }
     }
   - |
     {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "自定义问题",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "自定义答案"
-          }
-        }
-      ]
+      "@type": "VideoObject",
+      "name": "产品展示视频",
+      "contentUrl": "https://youtube.com/xxxxx"
     }
 ---
-
-文章正文...
 ```
 
-**说明**：
-- 使用 `custom_schemas` 后，会**完全替代**自动生成的 schema
-- 可以定义**多个** schema（数组形式）
-- 在 YAML 中使用 `|` 符号来保持 JSON 格式
-- 你需要自己确保 JSON 格式正确
+**包含**: Organization + BlogPosting + FAQ + Product + Video
 
-### 禁用自动 Schema
+---
 
-如果你想完全控制 schema，可以禁用自动生成：
+### 🔧 高级选项
+
+#### 禁用默认BlogPosting（很少需要）
 
 ```yaml
 ---
 layout: post
 title: "我的文章"
 disable_auto_schema: true
+custom_schemas:
+  - |
+    { 你的完全自定义schema }
 ---
 ```
+
+**包含**: Organization + 你的自定义schema（没有BlogPosting）
+
+---
+
+### 📚 常用Schema类型
+
+| Schema类型 | 用途 | 效果 |
+|-----------|------|------|
+| **Product** | 产品介绍 | 显示价格、库存 |
+| **HowTo** | 教程步骤 | 显示步骤列表 |
+| **Review** | 评价评分 | 显示星级⭐ |
+| **Video** | 视频内容 | 视频搜索优化 |
+| **Event** | 活动通知 | 显示时间地点 |
+| **FAQ** | 常见问题 | 显示问答框 |
+
+详细的Schema示例，请查看项目Wiki或联系技术支持。
 
 ---
 
