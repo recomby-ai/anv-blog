@@ -248,5 +248,5 @@ We provide:
 **Phone:** +86-13606905397
 **Email:** 1061509084@qq.com / vickeychan@xmghp.com
 **Website:** [www.anvsocks.com](https://www.anvsocks.com)
-**Blog:** [blog.recomby.ai/anv-blog](https://blog.recomby.ai/anv-blog/)
+**Blog:** [recomby-ai.github.io/anv-blog](https://recomby-ai.github.io/anv-blog/)
 **WeChat:** vickey13606905397

@@ -2,7 +2,16 @@
 layout: default
 ---
 
-<!-- Schema.org - BlogPosting (自动生成) -->
+{% if page.custom_schemas %}
+<!-- 自定义 Schema.org 标记 - 用户在文章 front matter 中定义 -->
+{% for schema in page.custom_schemas %}
+<script type="application/ld+json">
+{{ schema }}
+</script>
+{% endfor %}
+{% else %}
+<!-- 默认 Schema.org - BlogPosting (自动生成) -->
+{% unless page.disable_auto_schema %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -43,9 +52,10 @@ layout: default
   "inLanguage": "{{ page.lang | default: site.lang | default: 'en' }}"
 }
 </script>
+{% endunless %}
 
 {% if page.faq %}
-<!-- Schema.org - FAQPage (常见问题，自动生成) -->
+<!-- Schema.org - FAQPage (常见问题) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -65,38 +75,6 @@ layout: default
 }
 </script>
 {% endif %}
-
-{% if page.table %}
-<!-- Schema.org - Table (表格数据，自动生成) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Table",
-  "about": "{{ page.title }}",
-  "description": "Product specifications and details",
-  "data": {
-    {% for item in page.table %}
-    "{{ item[0] }}": "{{ item[1] }}"{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  }
-}
-</script>
-{% endif %}
-
-{% if page.sameAs %}
-<!-- Schema.org - Organization sameAs (社交媒体链接，自动生成) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "{{ site.company.name }}",
-  "sameAs": [
-    {% for link in page.sameAs %}
-    "{{ link }}"{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ]
-}
-</script>
 {% endif %}
 
 <article itemscope itemtype="http://schema.org/BlogPosting">
