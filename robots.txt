@@ -1,0 +1,41 @@
+# Robots.txt for ANV Blog
+# AI and search engine friendly - all content is public
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: {{ site.url }}/feed.xml
+
+# Special instructions for AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Allow common search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Crawl delay (be gentle)
+Crawl-delay: 1

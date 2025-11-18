@@ -1,0 +1,50 @@
+---
+layout: default
+title: Home
+---
+
+<div class="home">
+    <section class="company-intro">
+        <h2>Welcome to ANV Socks</h2>
+        <p>Professional socks manufacturer since 2002, located in Zhuji, Zhejiang - China's premier sock production base. With BSCI, ISO9001, SQP, SCAN, and SEDEX 4P certifications, we produce over 30 million pairs of high-quality socks annually for global markets.</p>
+    </section>
+
+    <h2>Latest Updates</h2>
+
+    <ul class="post-list">
+        {% for post in site.posts %}
+        <li>
+            <h3>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
+            <div class="post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%B %d, %Y" }}
+                </time>
+                {% if post.author %}
+                by {{ post.author }}
+                {% endif %}
+                {% if post.tags %}
+                <span class="tags">
+                    {% for tag in post.tags %}
+                    #{{ tag }}
+                    {% endfor %}
+                </span>
+                {% endif %}
+            </div>
+            {% if post.description %}
+            <p>{{ post.description }}</p>
+            {% else %}
+            <p>{{ post.excerpt | strip_html | truncate: 200 }}</p>
+            {% endif %}
+            <p><a href="{{ post.url | relative_url }}" class="read-more">Read more →</a></p>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% if site.posts.size == 0 %}
+    <div class="no-posts">
+        <p>No posts yet. Stay tuned for updates about our products, company news, and industry insights!</p>
+    </div>
+    {% endif %}
+</div>

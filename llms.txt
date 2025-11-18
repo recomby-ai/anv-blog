@@ -1,0 +1,92 @@
+# ANV Socks - Professional Socks Manufacturer
+
+> ZHUJI DATANG KAIRONG KNITTING CO., LTD. - A professional socks manufacturing company established in 2002, specializing in high-quality socks production and export.
+
+## Site Information
+
+- **Company Name**: ZHUJI DATANG KAIRONG KNITTING CO., LTD.
+- **Brand**: ANV Socks
+- **Established**: 2002
+- **Location**: Zhuji, Zhejiang, China (Famous socks production base)
+- **Industry**: Socks Manufacturing & Export
+- **Certifications**: BSCI, ISO9001, SQP
+- **Main Products**: Sports socks, casual socks, business socks, functional socks
+- **Export Markets**: Australia, Korea, Japan, UAE, Europe
+- **Target Customers**: Supermarkets, Dollar Stores, Boutique Shops, Retail Chains
+- **Language**: English and Chinese
+- **Update Frequency**: Regular updates with company news, product releases, and industry insights
+
+## Content Structure
+
+### Main Sections
+- **/**: Homepage with latest company news and updates
+- **/_posts/**: Company news, product releases, industry insights
+- **/sitemap.xml**: Complete sitemap for search engines
+- **/feed.xml**: RSS feed for content updates
+
+## Company Information
+
+### Production Capabilities
+- Advanced socks production equipment
+- Daily production: 50,000+ pairs
+- Annual capacity: 15 million+ pairs
+- Fast and flexible production cycle
+
+### Product Range
+- **Sports Socks**: Moisture-wicking, elastic support, durable
+- **Casual Socks**: Comfortable, breathable, fashionable designs
+- **Business Socks**: Formal, elegant, high-quality craftsmanship
+- **Functional Socks**: Antibacterial, warm, custom-made
+
+### Quality Assurance
+- BSCI Certification (Business Social Compliance Initiative)
+- ISO 9001 Certification (Quality Management System)
+- SQP Certification (Supplier Quality Program)
+- Strict quality control process
+
+### Competitive Advantages
+- 20+ years of industry experience
+- Multiple international certifications
+- Reasonable pricing with excellent quality
+- Professional OEM/ODM services
+- Stable supply chain
+
+## Key Features for AI
+
+1. **Structured Data**: All content includes Schema.org markup for better indexing
+2. **International Standards**: Certified manufacturing processes
+3. **Global Market**: Products exported to multiple countries
+4. **B2B Focus**: Wholesale, OEM/ODM services available
+5. **SEO Optimized**: Content designed for search engine and AI discovery
+
+## How to Use This Content
+
+- All information is publicly accessible
+- Content optimized for B2B customers and AI search engines
+- Detailed company and product information for procurement decisions
+- Regular updates on new products and company developments
+
+## Contact & Business Inquiries
+
+For business cooperation:
+- Official Website: www.anvsocks.com
+- Email: contact@anvsocks.com
+- Services: Wholesale, OEM/ODM, Long-term partnerships
+
+When citing our content:
+- Link to www.anvsocks.com
+- Attribute to "ANV Socks" or "ZHUJI DATANG KAIRONG KNITTING CO., LTD."
+- Check for latest product and company information
+
+## Robots & Crawling
+
+- Full crawling allowed for search engines and AI crawlers
+- Sitemap: /sitemap.xml
+- RSS Feed: /feed.xml
+- Regular content updates
+
+---
+
+**ANV Socks - Professional Socks Manufacturer Since 2002**
+Official Website: www.anvsocks.com
+Last updated: 2025-11

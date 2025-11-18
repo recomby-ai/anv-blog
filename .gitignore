@@ -1,0 +1,24 @@
+# Jekyll generated files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby/Bundle files
+.bundle/
+vendor/
+Gemfile.lock
+
+# System files
+.DS_Store
+*.swp
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary files
+*.tmp
+.claude/

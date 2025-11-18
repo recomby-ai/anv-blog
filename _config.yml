@@ -1,0 +1,61 @@
+# Site settings
+title: ANV Socks - Professional Socks Manufacturer Since 2002
+description: Zhejiang Zhuji Datang Kairong Knitting Factory - Professional socks manufacturer with BSCI, ISO9001, SQP, SCAN, and SEDEX 4P certifications. Producing 30 million pairs annually and exporting globally.
+baseurl: "" # Leave empty for GitHub Pages user site, or "/repo-name" for project site
+url: "https://www.anvsocks.com" # Official website
+
+# Company info
+company:
+  name: ZHUJI DATANG KAIRONG KNITTING CO., LTD.
+  trading_name: XIAMEN GHP CO., LTD.
+  alternative_name: A&V CORP. LTD.
+  established: 2002
+  location: Zhuji, Zhejiang, China
+  area: 3000 square meters
+  workers: 100+
+  annual_capacity: 30 million pairs
+  phone: 0086-592-2097683
+  fax: 0086-592-2097693
+  email: vickeychan@xmghp.com
+  address: Building 1, No.917, Loujia Village, Zhusong Community, Datang Street, Zhuji, Zhejiang, China
+
+# Author info
+author:
+  name: ANV Socks Team
+  email: vickeychan@xmghp.com
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO settings
+lang: en
+timezone: Asia/Shanghai
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "ANV Team"
