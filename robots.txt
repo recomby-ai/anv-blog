@@ -5,8 +5,8 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: {{ site.url }}/sitemap.xml
-Sitemap: {{ site.url }}/feed.xml
+Sitemap: https://recomby-ai.github.io/anv-blog/sitemap.xml
+Sitemap: https://recomby-ai.github.io/anv-blog/feed.xml
 
 # Special instructions for AI crawlers
 User-agent: GPTBot
