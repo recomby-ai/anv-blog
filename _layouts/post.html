@@ -2,15 +2,7 @@
 layout: default
 ---
 
-{% if page.custom_schemas %}
-<!-- 自定义 Schema.org 标记 - 用户在文章 front matter 中定义 -->
-{% for schema in page.custom_schemas %}
-<script type="application/ld+json">
-{{ schema }}
-</script>
-{% endfor %}
-{% else %}
-<!-- 默认 Schema.org - BlogPosting (自动生成) -->
+<!-- 1. 默认 Schema.org - BlogPosting（固定保留，除非手动禁用） -->
 {% unless page.disable_auto_schema %}
 <script type="application/ld+json">
 {
@@ -54,8 +46,8 @@ layout: default
 </script>
 {% endunless %}
 
+<!-- 2. FAQ Schema（可选，在 front matter 中定义 faq 即可） -->
 {% if page.faq %}
-<!-- Schema.org - FAQPage (常见问题) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -75,6 +67,14 @@ layout: default
 }
 </script>
 {% endif %}
+
+<!-- 3. 自定义 Schemas（完全由你控制，可添加 Product, HowTo, Video 等） -->
+{% if page.custom_schemas %}
+{% for schema in page.custom_schemas %}
+<script type="application/ld+json">
+{{ schema }}
+</script>
+{% endfor %}
 {% endif %}
 
 <article itemscope itemtype="http://schema.org/BlogPosting">
